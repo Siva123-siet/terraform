@@ -6,7 +6,7 @@ resource "aws_instance" "roboshop" {
 
   tags = merge(var.common_tags, {
     Component = var.instances[count.index]
-    Name = var.instances[count.index]
+    Name      = var.instances[count.index]
   })
 }
 

@@ -64,10 +64,10 @@ variable "domain_name" {
 
 variable "common_tags" {
   default = {
-    project = "Roboshop"
+    project   = "Roboshop"
     Terraform = "true"
   }
-  
+
 }
 
 
