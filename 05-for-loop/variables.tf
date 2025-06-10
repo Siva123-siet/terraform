@@ -46,8 +46,29 @@ variable "sg_tags" {
 }
 
 variable "environment" {
-  default = "prod"
+  default = "dev"
 
+}
+
+# variable "instances" {
+#     default = {
+#         mongodb = "t3.micro" #each keyword is assigned for every iteration.You will get each.key and each.value
+#         redis = "t3.micro"
+#         mysql = "t3.small"
+#         rabbitmq = "t3.micro"
+#     }
+# }
+
+variable "instances" {
+  default = ["mongodb", "redis", "mysql", "rabbitmq"]
+}
+
+variable "zone_id" {
+  default = "Z09248402W8JYCL29MVAP"
+}
+
+variable "domain_name" {
+  default = "daws-84s.store"
 }
 
 
