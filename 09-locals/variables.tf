@@ -1,23 +1,23 @@
 variable "project" {
-    default = "Roboshop"
+  default = "Roboshop"
 }
 
 variable "environment" {
-    default = "dev" 
+  default = "dev"
 }
 
 variable "Component" {
-    default = "cart"
+  default = "cart"
 }
 
-variable "common_tags"{
-    default = {
-        Project = "roboshop"
-        Terraform = "true"
-    }
+variable "common_tags" {
+  default = {
+    Project   = "roboshop"
+    Terraform = "true"
+  }
 }
 
 # variable "final-name" {
 #     default = "${var.project}-${var.environment}-${var.Component}"
-  
+
 # }
