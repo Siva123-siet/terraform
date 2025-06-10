@@ -1,6 +1,6 @@
 variable "ami_id" {
-  type = string
-  default = "ami-09c813fb71547fc4f"
+  type        = string
+  default     = "ami-09c813fb71547fc4f"
   description = "AMI ID of joindevops RHEL9"
 }
 
@@ -9,44 +9,44 @@ variable "instance_type" {
 }
 
 variable "ec2_tags" {
-    type = map(string)
-    default={
-        Name = "Helloworld"
-        purpose = "variables-demo"
-    }
+  type = map(string)
+  default = {
+    Name    = "Helloworld"
+    purpose = "variables-demo"
+  }
 }
 
 variable "sg_name" {
-#   default = "allow_all"
-    default = "allow_all"
+  #   default = "allow_all"
+  default = "allow_all"
 }
-  
+
 variable "sg_description" {
-    default = "allow all traffic" 
+  default = "allow all traffic"
 }
 
 variable "from_port" {
-    default = 0
+  default = 0
 }
 
 variable "to_port" {
-    type = number
-    default = 0
+  type    = number
+  default = 0
 }
 
 variable "cidr_blocks" {
-    type = list(string)
-    default = ["0.0.0.0/0"]
+  type    = list(string)
+  default = ["0.0.0.0/0"]
 }
 
 variable "sg_tags" {
-    default = {
-        Name = "allow_all"
-    }
+  default = {
+    Name = "allow_all"
+  }
 }
 
 variable "environment" {
-    default = "dev"
+  default = "dev"
 
 }
 
@@ -60,7 +60,7 @@ variable "environment" {
 # }
 
 variable "instances" {
-    default = ["mongodb", "redis", "mysql", "rabbitmq"]
+  default = ["mongodb", "redis", "mysql", "rabbitmq"]
 }
 
 variable "zone_id" {
@@ -68,8 +68,28 @@ variable "zone_id" {
 }
 
 variable "domain_name" {
- default = "daws-84s.store"
-} 
+  default = "daws-84s.store"
+}
+
+variable "ingress_ports" {
+  default = [ #list(map)
+    {
+      from_port = 22
+      to_port   = 22
+    },
+
+    {
+      from_port = 80
+      to_port   = 80
+    },
+
+    {
+      from_port = 8080
+      to_port   = 8080
+    }
+  ]
+
+}
 
 
 
