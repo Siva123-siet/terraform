@@ -54,5 +54,13 @@ variable "instances" {
     default =  ["mongodb", "frontend", "mysql", "redis"]
 }
 
+variable "zone_id" {
+  default = "Z09248402W8JYCL29MVAP"
+}
+
+variable "domain_name" {
+ default = "daws-84s.store"
+} 
+
 
 
