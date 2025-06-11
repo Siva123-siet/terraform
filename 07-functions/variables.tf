@@ -51,7 +51,7 @@ variable "environment" {
 }
 
 variable "instances" {
-  default = ["mongodb", "frontend", "mysql", "redis"]
+  default = ["cart", "catalogue", "payment"]
 }
 
 variable "zone_id" {
