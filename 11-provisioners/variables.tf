@@ -51,7 +51,7 @@ variable "environment" {
 }
 
 variable "instances" {
-  default = ["cart", "catalogue", "payment"]
+  default = ["frontend"]
 }
 
 variable "zone_id" {
